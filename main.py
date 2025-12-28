@@ -15,7 +15,7 @@ import os
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyC6Ng-CaIjKLMnEDRWsrNsogQhJf_psNzM")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyDcOQJIrnQncUPVsluHIj3W4hwV2uMnLuE")
 AI_ENABLED = bool(GOOGLE_API_KEY and GOOGLE_API_KEY.strip())
 model = None
 if AI_ENABLED:
@@ -331,4 +331,5 @@ if __name__ == "__main__":
     print("🌐 Servidor rodando em: http://127.0.0.1:8000")
     print("🧪 Teste a IA em: http://127.0.0.1:8000/test_ai")
     print("=" * 60)
+
     uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
